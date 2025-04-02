@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace BankAccountAPP
 {
-    internal class BankAccount
+    public class BankAccount
     {
+        public string Owner { get; set; }
+        public Guid AccountNumber { get; set; }
+        public decimal Balance { get;  set; }
+
+        //Creating a constructor
+        public BankAccount(string userName)
+        {
+            Owner = userName;
+            AccountNumber = Guid.NewGuid();
+            Balance = 0;
+        }
     }
 }

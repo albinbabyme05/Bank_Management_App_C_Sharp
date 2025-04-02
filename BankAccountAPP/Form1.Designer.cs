@@ -30,13 +30,13 @@
         {
             label1 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            BankAccountsGrid = new DataGridView();
             DepositBtn = new Button();
             WithdrawBtn = new Button();
             CreateUserBtn = new Button();
             EnterUserNameTxt = new TextBox();
             UserEnteredAmount = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BankAccountsGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)UserEnteredAmount).BeginInit();
             SuspendLayout();
             // 
@@ -60,14 +60,14 @@
             label2.TabIndex = 1;
             label2.Text = "Amount";
             // 
-            // dataGridView1
+            // BankAccountsGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(356, 13);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(432, 324);
-            dataGridView1.TabIndex = 2;
+            BankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BankAccountsGrid.Location = new Point(356, 13);
+            BankAccountsGrid.Name = "BankAccountsGrid";
+            BankAccountsGrid.RowHeadersWidth = 51;
+            BankAccountsGrid.Size = new Size(432, 324);
+            BankAccountsGrid.TabIndex = 2;
             // 
             // DepositBtn
             // 
@@ -125,12 +125,12 @@
             Controls.Add(CreateUserBtn);
             Controls.Add(WithdrawBtn);
             Controls.Add(DepositBtn);
-            Controls.Add(dataGridView1);
+            Controls.Add(BankAccountsGrid);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BankAccountsGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)UserEnteredAmount).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -140,7 +140,7 @@
 
         private Label label1;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView BankAccountsGrid;
         private Button DepositBtn;
         private Button WithdrawBtn;
         private Button CreateUserBtn;
