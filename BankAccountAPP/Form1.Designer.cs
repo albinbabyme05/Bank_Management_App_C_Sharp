@@ -62,6 +62,7 @@
             // 
             // BankAccountsGrid
             // 
+            BankAccountsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             BankAccountsGrid.Location = new Point(356, 13);
             BankAccountsGrid.Name = "BankAccountsGrid";
@@ -78,6 +79,7 @@
             DepositBtn.TabIndex = 3;
             DepositBtn.Text = "Deposit";
             DepositBtn.UseVisualStyleBackColor = true;
+            DepositBtn.Click += DepositBtn_Click;
             // 
             // WithdrawBtn
             // 
@@ -88,6 +90,7 @@
             WithdrawBtn.TabIndex = 4;
             WithdrawBtn.Text = "Withdraw";
             WithdrawBtn.UseVisualStyleBackColor = true;
+            WithdrawBtn.Click += WithdrawBtn_Click;
             // 
             // CreateUserBtn
             // 
@@ -98,6 +101,7 @@
             CreateUserBtn.TabIndex = 5;
             CreateUserBtn.Text = "Create Account";
             CreateUserBtn.UseVisualStyleBackColor = true;
+            CreateUserBtn.Click += CreateUserBtn_Click;
             // 
             // EnterUserNameTxt
             // 
@@ -111,6 +115,7 @@
             // 
             UserEnteredAmount.Font = new Font("Segoe UI", 16F);
             UserEnteredAmount.Location = new Point(121, 369);
+            UserEnteredAmount.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             UserEnteredAmount.Name = "UserEnteredAmount";
             UserEnteredAmount.Size = new Size(196, 43);
             UserEnteredAmount.TabIndex = 7;

@@ -1,3 +1,5 @@
+using BankApp;
+
 namespace BankAccountAPP
 {
     public partial class Form1 : Form
@@ -9,7 +11,7 @@ namespace BankAccountAPP
             InitializeComponent();
         }
 
-        private void CreateAccountBtn_Click(object sender, EventArgs e)
+        private void CreateUserBtn_Click(object sender, EventArgs e)
         {
             // 1.checking the userName exists or not 
             if (string.IsNullOrEmpty(EnterUserNameTxt.Text))
@@ -25,7 +27,6 @@ namespace BankAccountAPP
 
             //clear the field after the userName entry
             EnterUserNameTxt.Text = string.Empty; //UserNameTxt.Text = "";
-
         }
         private void RefreshGrid()
         {
@@ -41,15 +42,15 @@ namespace BankAccountAPP
                 // D2. to get the selected row access
                 BankAccount selectedUser = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
 
-                selectedUser.Balance += UserEnteredAmount.Value;
-
+                string message = selectedUser.ValidateDeposit(UserEnteredAmount.Value);
 
                 RefreshGrid();
                 UserEnteredAmount.Value = 0;
-                
+                MessageBox.Show(message);
 
             }
         }
+
         private void WithdrawBtn_Click(object sender, EventArgs e)
         {
             //W1. checking one row is selected and the amount entered > 0
@@ -57,11 +58,11 @@ namespace BankAccountAPP
             {
                 BankAccount selectedUser = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
 
-                selectedUser.Balance += UserEnteredAmount.Value;
+                string message = selectedUser.Validatewithdraw(UserEnteredAmount.Value);
 
                 RefreshGrid();
                 UserEnteredAmount.Value = 0;
-   
+                MessageBox.Show(message);
             }
         }
     }
