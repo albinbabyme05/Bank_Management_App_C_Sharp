@@ -32,5 +32,37 @@ namespace BankAccountAPP
             BankAccountsGrid.DataSource = null;
             BankAccountsGrid.DataSource = bankAccounts;
         }
+
+        private void DepositBtn_Click(object sender, EventArgs e)
+        {
+            //D1. checking the only one row is selected and amount entered >0
+            if (BankAccountsGrid.SelectedRows.Count == 1 && UserEnteredAmount.Value > 0)
+            {
+                // D2. to get the selected row access
+                BankAccount selectedUser = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
+
+                selectedUser.Balance += UserEnteredAmount.Value;
+
+
+                RefreshGrid();
+                UserEnteredAmount.Value = 0;
+                
+
+            }
+        }
+        private void WithdrawBtn_Click(object sender, EventArgs e)
+        {
+            //W1. checking one row is selected and the amount entered > 0
+            if (BankAccountsGrid.SelectedRows.Count == 1 && UserEnteredAmount.Value > 0)
+            {
+                BankAccount selectedUser = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
+
+                selectedUser.Balance += UserEnteredAmount.Value;
+
+                RefreshGrid();
+                UserEnteredAmount.Value = 0;
+   
+            }
+        }
     }
 }
