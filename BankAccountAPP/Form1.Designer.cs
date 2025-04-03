@@ -67,10 +67,10 @@
             // 
             BankAccountsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BankAccountsGrid.Location = new Point(356, 13);
+            BankAccountsGrid.Location = new Point(367, 12);
             BankAccountsGrid.Name = "BankAccountsGrid";
             BankAccountsGrid.RowHeadersWidth = 51;
-            BankAccountsGrid.Size = new Size(432, 324);
+            BankAccountsGrid.Size = new Size(421, 347);
             BankAccountsGrid.TabIndex = 2;
             // 
             // DepositBtn
@@ -98,7 +98,7 @@
             // CreateUserBtn
             // 
             CreateUserBtn.Font = new Font("Segoe UI", 12F);
-            CreateUserBtn.Location = new Point(130, 134);
+            CreateUserBtn.Location = new Point(154, 131);
             CreateUserBtn.Name = "CreateUserBtn";
             CreateUserBtn.Size = new Size(196, 51);
             CreateUserBtn.TabIndex = 5;
@@ -109,7 +109,7 @@
             // EnterUserNameTxt
             // 
             EnterUserNameTxt.Font = new Font("Segoe UI", 16F);
-            EnterUserNameTxt.Location = new Point(130, 13);
+            EnterUserNameTxt.Location = new Point(154, 13);
             EnterUserNameTxt.Name = "EnterUserNameTxt";
             EnterUserNameTxt.Size = new Size(196, 43);
             EnterUserNameTxt.TabIndex = 6;
@@ -129,14 +129,14 @@
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(-1, 82);
             label3.Name = "label3";
-            label3.Size = new Size(130, 28);
+            label3.Size = new Size(158, 28);
             label3.TabIndex = 8;
-            label3.Text = "Interest Rate :";
+            label3.Text = "Interest Rate(%) :";
             // 
             // UserInterestRate
             // 
             UserInterestRate.Font = new Font("Segoe UI", 16F);
-            UserInterestRate.Location = new Point(130, 73);
+            UserInterestRate.Location = new Point(154, 73);
             UserInterestRate.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             UserInterestRate.Name = "UserInterestRate";
             UserInterestRate.Size = new Size(196, 43);
