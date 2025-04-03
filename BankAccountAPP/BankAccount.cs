@@ -10,7 +10,7 @@ namespace BankApp
     {
         public string Owner { get; set; }
         public Guid AccountNumber { get; set; }
-        public decimal Balance { get; private set; }
+        public decimal Balance { get; protected set; }
 
         //Creating a constructor
         public BankAccount(string userName)
@@ -20,7 +20,7 @@ namespace BankApp
             Balance = 0;
         }
 
-        public string ValidateDeposit(decimal amount)
+        public virtual string ValidateDeposit(decimal amount)
         {
             if (amount > 20000)
             {

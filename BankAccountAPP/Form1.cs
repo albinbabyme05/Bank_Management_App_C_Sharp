@@ -19,14 +19,25 @@ namespace BankAccountAPP
                 return;
             }
 
-
-            //2. if a userName,creating a object
-            BankAccount newUser = new BankAccount(EnterUserNameTxt.Text);
-            bankAccounts.Add(newUser);
+            //check the ínterest rate added or not
+            if(UserInterestRate.Value > 0)
+            {
+                SavingsAccount newSavingsUser = new SavingsAccount(EnterUserNameTxt.Text, UserInterestRate.Value);
+                bankAccounts.Add(newSavingsUser);
+            }
+            else
+            {
+                //2. if a userName,creating a object
+                BankAccount newUser = new BankAccount(EnterUserNameTxt.Text);
+                bankAccounts.Add(newUser);
+                
+            }
+            
             RefreshGrid();
 
             //clear the field after the userName entry
             EnterUserNameTxt.Text = string.Empty; //UserNameTxt.Text = "";
+            UserInterestRate.Value = 0;
         }
         private void RefreshGrid()
         {
@@ -43,6 +54,7 @@ namespace BankAccountAPP
                 BankAccount selectedUser = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
 
                 string message = selectedUser.ValidateDeposit(UserEnteredAmount.Value);
+                
 
                 RefreshGrid();
                 UserEnteredAmount.Value = 0;
